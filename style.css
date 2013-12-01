@@ -315,14 +315,19 @@ Portfolio
 .portfolio-content nav li {
 	display: inline-block;
 	margin-right: 2.5%;
+}
 
+/* PORTFOLIO HOVER */
+.portfolio-items article:hover img{
+    opacity: 0.5;
+    filter:alpha(opacity=50);
 }
 
 .portfolio-context {
 	opacity: 1;
 	position: relative;
 	min-height: 120px;
-
+	text-align: center;
 }
 
 /*
