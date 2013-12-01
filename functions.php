@@ -60,3 +60,9 @@ function fixed_img_caption_shortcode($attr, $content = null) {
   if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" >' . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
+
+register_sidebar(array(
+  'name' => __( 'Blog Footer' ),
+  'id' => 'blog_footer',
+  'description' => __( 'Widgets in this area will be shown at the bottom of the blog section.' )
+));

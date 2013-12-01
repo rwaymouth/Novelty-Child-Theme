@@ -4,15 +4,15 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 
 <div class="portfolio-content">
 
-	<?php 	
-			echo '<div class="portfolio-header"><h1>'.get_the_title().'</h1><nav>';
+	<?php
+			echo '<div class="portfolio-header"><h1>'.get_the_title().'</h1>';
 
         //wp_nav_menu( array('theme_location' => 'portfolio') );
 
-			echo "<button> 
-			<a href='../'>Back</a>
-			</buton>		
-			</div></nav>"
+			echo "<a clas="portfolio-nav" href='../'><button>
+			Back
+			</buton></a>
+			</div>"
 ;
 			the_content();
 

@@ -308,7 +308,8 @@ Portfolio
 	font-size: 0.75em;
 }
 
-.portfolio-header nav{
+.portfolio-header h1{
+    float: right;
 }
 
 
@@ -328,6 +329,20 @@ Portfolio
 	position: relative;
 	min-height: 120px;
 	text-align: center;
+}
+
+.portfolio-nav {
+    float: right;
+}
+
+/*
+Archives
+*/
+
+.wpb_caw_widget ul li {
+    display: inline-block;
+    padding: 1em;
+    max-width: 8.33%;
 }
 
 /*
