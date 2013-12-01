@@ -308,7 +308,10 @@ Portfolio
 	font-size: 0.75em;
 }
 
-.portfolio-header h1{
+.portfolio-header > h1{
+    float: left;
+}
+.portfolio-header > nav{
     float: right;
 }
 
@@ -329,10 +332,6 @@ Portfolio
 	position: relative;
 	min-height: 120px;
 	text-align: center;
-}
-
-.portfolio-nav {
-    float: right;
 }
 
 /*
