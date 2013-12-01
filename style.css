@@ -311,7 +311,7 @@ Portfolio
 .portfolio-header > h1{
     float: left;
 }
-.portfolio-header > nav{
+.portfolio-nav {
     float: right;
 }
 
@@ -342,6 +342,10 @@ Archives
     display: inline-block;
     padding: 1em;
     max-width: 8.33%;
+}
+
+.widget > li {
+    list-style: none;
 }
 
 /*

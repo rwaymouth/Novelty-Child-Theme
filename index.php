@@ -1,4 +1,4 @@
-<?php get_header();  
+<?php get_header();
 
 $layout = $smof_data['blog_single_sidebar'];
 
@@ -25,11 +25,11 @@ if ($smof_data['single_blog_bread'] == 1 ) dimox_breadcrumbs(); ?>
 			<?php bmd_pagination(); ?>
 
         	<?php if ($layout != 'without') get_sidebar(); ?>
-        	
-        <?php if ($layout != 'without') echo '</div>'; ?>
 
+        <?php if ($layout != 'without') echo '</div>'; ?>
+        <?php dynamic_sidebar('blog_footer'); ?>
 		</div>
-    </div><!-- end div.container -->    
+    </div><!-- end div.container -->
 </div><!-- end div#content-->
 
 <?php get_footer();  ?>
