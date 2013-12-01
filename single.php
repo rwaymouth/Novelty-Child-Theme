@@ -28,6 +28,7 @@ if ($smof_data['single_blog_bread'] == 1 ) dimox_breadcrumbs(); ?>
 		        	<?php if (comments_open() || '0' != get_comments_number()) comments_template( '', true ); ?>
 		        	<div class ="mb60"></div>
 				<?php endwhile; endif; ?>
+    <?php dynamic_sidebar('blog_footer'); ?>
 
 			</div>
 
@@ -36,7 +37,6 @@ if ($smof_data['single_blog_bread'] == 1 ) dimox_breadcrumbs(); ?>
         <?php if ($layout != 'without') echo '</div>'; ?>
 
     </div><!-- end div.container -->
-    <?php get_sidebar('blog_footer'); ?>
 </div><!-- end div#content-->
 
 <?php get_footer(); ?>

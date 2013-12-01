@@ -40,8 +40,6 @@ if ($bread == 'Yes') { dimox_breadcrumbs(); }
             <?php if ( $class != 'without' && $class != '' ) { get_sidebar(); }  ?>
 
         <?php if ( $class != 'without' && $class != '' ) echo '</div>'; ?>
-        <?php dynamic_sidebar('blog_footer'); ?>
-
     </div><!-- end div.container -->
 </div><!-- end div#content-->
 
