@@ -37,6 +37,5 @@ if ($smof_data['single_blog_bread'] == 1 ) dimox_breadcrumbs(); ?>
         <?php if ($layout != 'without') echo '</div>'; ?>
 
     </div><!-- end div.container -->
-</div><!-- end div#content-->
 
 <?php get_footer(); ?>
