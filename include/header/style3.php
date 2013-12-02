@@ -31,7 +31,30 @@
         echo '<nav>';
             wp_nav_menu($args);
         echo '<div class="social-block clearfix">
-
+            <ul class="clearfix">
+                <li class="facebook">
+                    <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook">
+                    <img src="';
+                    bloginfo('stylesheet_directory');
+                    echo '/img/facebook.png" alt="">
+                    </a>
+                </li>
+                <li class="flickr">
+                    <a href="#" target="_blank" original-title="Flickr">
+                        <img src="';
+                        bloginfo('stylesheet_directory');
+                        echo '/img/flickr.png" alt="">
+                    </a>
+                </li>
+                <li class="pinterest">
+                    <a href="#" target="_blank" original-title="Pinterest">
+                        <img src="'
+                        bloginfo('stylesheet_directory');
+                        echo '/img/pinterest.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
         </nav>';
         endif;
         ?>
