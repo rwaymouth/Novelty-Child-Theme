@@ -35,13 +35,19 @@
         <div class="social-block clearfix">
             <ul class="clearfix">
                 <li class="facebook">
-                    <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook"></a>
+                    <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook">
+                        <img src="img/facebook.png" alt="">
+                    </a>
                 </li>
                 <li class="flickr">
-                    <a href="#" target="_blank" original-title="Flickr"></a>
+                    <a href="#" target="_blank" original-title="Flickr">
+                        <img src="img/flickr.png" alt="">
+                    </a>
                 </li>
                 <li class="pinterest">
-                    <a href="#" target="_blank" original-title="Pinterest"></a>
+                    <a href="#" target="_blank" original-title="Pinterest">
+                        <img src="img/pinterest.png" alt="">
+                    </a>
                 </li>
             </ul>
         </div>

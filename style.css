@@ -274,8 +274,6 @@ img {
 }
 
 
-
-
 /*
 Comments
 */
@@ -351,6 +349,24 @@ Archives
 li.widget {
     list-style: none;
 }
+
+/*
+Social in Nav
+*/
+
+.social-block {
+    display: inline-block;
+    float: left;
+}
+
+.social-block li {
+    display: inline-block;
+    padding: 1rem;
+}
+.social-block li > a img {
+    max-height: 1em;
+}
+
 
 /*
 Media Queries
