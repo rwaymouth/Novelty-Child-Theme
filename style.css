@@ -198,7 +198,7 @@ Blog
 	background: url(../novelty/images/divider.png) repeat-x bottom center, rgba(white, 0.1);
 	/*padding: 1em;*/
 	box-shadow: 0px 1px 1px -1px black;
-	width: 280px;
+	max-width: 280px;
 	margin: 0 0 25px;
 	padding: 0;
 }
