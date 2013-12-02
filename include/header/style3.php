@@ -32,9 +32,17 @@
         endif;
         ?>
         <!-- end: menu -->
-        <div class="social-block">
-            <ul class="social">
-                <?php include(locate_template('include/social.php')); ?>
+        <div class="social-block clearfix">
+            <ul class="clearfix">
+                <li class="facebook">
+                    <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook"></a>
+                </li>
+                <li class="flickr">
+                    <a href="#" target="_blank" original-title="Flickr"></a>
+                </li>
+                <li class="pinterest">
+                    <a href="#" target="_blank" original-title="Pinterest"></a>
+                </li>
             </ul>
         </div>
     </div><!-- end: div.container  -->
