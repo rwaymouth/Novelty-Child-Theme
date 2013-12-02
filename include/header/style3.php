@@ -36,17 +36,17 @@
             <ul class="clearfix">
                 <li class="facebook">
                     <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook">
-                        <img src="img/facebook.png" alt="">
+                        <img src="<?php bloginfo('template_directory')?>img/facebook.png" alt="">
                     </a>
                 </li>
                 <li class="flickr">
                     <a href="#" target="_blank" original-title="Flickr">
-                        <img src="img/flickr.png" alt="">
+                        <img src="<?php bloginfo('template_directory')?>img/flickr.png" alt="">
                     </a>
                 </li>
                 <li class="pinterest">
                     <a href="#" target="_blank" original-title="Pinterest">
-                        <img src="img/pinterest.png" alt="">
+                        <img src="<?php bloginfo('template_directory')?>img/pinterest.png" alt="">
                     </a>
                 </li>
             </ul>
