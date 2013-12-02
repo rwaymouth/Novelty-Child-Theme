@@ -24,33 +24,36 @@
         if (has_nav_menu('main_menu')):
             $args = array(
                 'theme_location' => 'main_menu',
-                'container'      => 'nav',
+                'container'      => false,
                 'menu_id'        => 'menu',
                 'menu_class'     => 'clearfix'
             );
+        echo '<nav>';
             wp_nav_menu($args);
-        endif;
-        ?>
-        <!-- end: menu -->
-        <div class="social-block clearfix">
+        echo '<div class="social-block clearfix">
             <ul class="clearfix">
                 <li class="facebook">
                     <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook">
-                        <img src="<?php bloginfo('stylesheet_directory')?>/img/facebook.png" alt="">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/img/facebook.png" alt="">
                     </a>
                 </li>
                 <li class="flickr">
                     <a href="#" target="_blank" original-title="Flickr">
-                        <img src="<?php bloginfo('stylesheet_directory')?>/img/flickr.png" alt="">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/img/flickr.png" alt="">
                     </a>
                 </li>
                 <li class="pinterest">
                     <a href="#" target="_blank" original-title="Pinterest">
-                        <img src="<?php bloginfo('stylesheet_directory')?>/img/pinterest.png" alt="">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/img/pinterest.png" alt="">
                     </a>
                 </li>
             </ul>
         </div>
+        </nav>';
+        endif;
+        ?>
+        <!-- end: menu -->
+
     </div><!-- end: div.container  -->
 </header>
 <!-- END: HEADER -->

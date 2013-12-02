@@ -361,10 +361,10 @@ Social in Nav
 
 .social-block li {
     display: inline-block;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 .social-block li > a img {
-    max-height: 1em;
+    max-height: 2em;
 }
 
 
