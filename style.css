@@ -134,6 +134,12 @@ Blog
 		line-height: 1.55;
 	}
 
+    .blog-content > h1 {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 1em;
+    }
+
 	.wp-caption {
 		text-align: center;
 		font-size: 85%;

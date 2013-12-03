@@ -34,18 +34,18 @@
         <div class="social-block clearfix">
             <ul class="clearfix">
                 <li class="facebook">
-                    <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" original-title="Facebook">
+                    <a href="https://www.facebook.com/LeighNicholsPhotography" target="_blank" data-rel="tipsy-s" original-title="Facebook">
                         <img src="<?php bloginfo('stylesheet_directory');?>/img/facebook.png" alt="">
                     </a>
                 </li>
                 <li class="flickr">
-                    <a href="#" target="_blank" original-title="Flickr">
+                    <a href="#" target="_blank" data-rel="tipsy-s" original-title="Flickr">
                         <img src="
                         <?php bloginfo('stylesheet_directory');?>/img/flickr.png" alt="">
                     </a>
                 </li>
                 <li class="pinterest">
-                    <a href="#" target="_blank" original-title="Pinterest">
+                    <a href="http://www.pinterest.com/leighwnichols/" target="_blank" data-rel="tipsy-s" original-title="Pinterest">
                         <img src="<?php bloginfo('stylesheet_directory');?>/img/pinterest.png" alt="">
                     </a>
                 </li>

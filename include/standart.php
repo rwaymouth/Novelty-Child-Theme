@@ -4,34 +4,53 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 
 <div class="blog-post-content">
 
-	<?php 
-	
+	<?php
+
 	if ($blog_style2 == 'style1' || (is_singular() && $featured == 'Yes') || is_archive() || is_tag() || is_category() ) {
 		if (has_post_thumbnail($post->ID, 'full')) {
 			$imgurl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 			$img_url = $imgurl[0];
 
-			if (is_singular()) { 
-				$height = ''; 
+			if (is_singular()) {
+				$height = '';
 			} else {
 				$height = '400';
 			}
-			
+
 			if (isset($layout) == 'without') {
 				$image = aq_resize($img_url, 960, $height, true);
 			} else {
 				$image = aq_resize($img_url, 720, $height, true);
 			}
 
-			//echo '<img src="' . $image . '" alt="' . get_the_title() . '" class="mb50"/>'; 
+			//echo '<img src="' . $image . '" alt="' . get_the_title() . '" class="mb50"/>';
 		}
-	} 
+	}
 	?>
 	<div class="blog-content">
-		<?php 
+		<?php
 		if (is_singular()) :
 
-			echo '<h1>'.get_the_title().'</h1>';
+			echo '<h1>'.get_the_title().'</h1>';?>
+			<div class="social-block">
+						<ul>
+
+					                    <?php if($smof_data['sharing_facebook']): ?>
+                    <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>" data-rel="tipsy-s" title="Facebook" class="facebook" target="_blank">                        <img src="<?php bloginfo('stylesheet_directory');?>/img/facebook.png" alt="">
+</a></li>
+                    <?php endif; ?>
+
+
+                    <?php if($smof_data['sharing_pinterest']): ?>
+                    <li>
+                        <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&amp;description=<?php echo urlencode($post->post_title); ?>" data-rel="tipsy-s" title="Pinterest" class="pinterest" target="_blank">                         <img src="<?php bloginfo('stylesheet_directory');?>/img/pinterest.png" alt="">
+</a>
+                    </li>
+                    </ul>
+                </div>
+                    <?php endif;?>
+
+		<?php
 
 			if ($smof_data['single_blog_cat'] == '1' || $smof_data['single_blog_date'] == '1' || $smof_data['single_blog_comm'] == '1'){
 				echo '<div class="meta clearfix">';
@@ -47,40 +66,42 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 					if ($smof_data['single_blog_cat'] == '1'){
 						echo '<span class="meta-cat">';
 							echo '<i class="icon-folder-open-alt"></i>';
-							the_category(', '); 
-						echo '</span>'; 
+							the_category(', ');
+						echo '</span>';
 					}
 
 					if ($smof_data['single_blog_comm'] == '1'){
 						echo '<span class="meta-comm">';
 							echo '<i class="icon-comment-alt"></i>';
-							comments_popup_link('0 Comments', '1 Comment', '% Comments'); 
-						echo '</span>'; 
+							comments_popup_link('0 Comments', '1 Comment', '% Comments');
+						echo '</span>';
 					}
-					
-				echo '</div>';
-			}
 
+
+				echo '</div>';
+			}?>
+
+		<?php
 			if ($blog_style2 == 'style2'){
 				if (has_post_thumbnail($post->ID, 'full')){
 					$imgurl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
 					$img_url = $imgurl[0];
 
-					if (is_singular()) { 
-						$height = ''; 
+					if (is_singular()) {
+						$height = '';
 					} else {
 						$height = '400';
 					}
-					
+
 					if (isset($layout) == 'without') {
 						$image = aq_resize($img_url, 960, $height, true);
 					} else {
 						$image = aq_resize($img_url, 720, $height, true);
 					}
 
-					echo '<img src="' . $image . '" alt="Loop-1-' . get_the_title() . '" class="mb25"/>'; 
+					echo '<img src="' . $image . '" alt="Loop-1-' . get_the_title() . '" class="mb25"/>';
 				}
-			} 
+			}
 
 			the_content();
 ?>
@@ -93,35 +114,7 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 
 				wp_enqueue_script('tipsy') ?>
 
-				<ul class="sharing-post clearfix">
-					<?php if($smof_data['sharing_facebook']): ?>
-					<li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>" data-rel="tipsy-s" title="Facebook" class="social-facebook" target="_blank"></a></li>
-					<?php endif; ?>
 
-					<?php if($smof_data['sharing_twitter']): ?>
-					<li>
-						<a href="http://twitter.com/home?status=<?php the_title(); ?> <?php the_permalink(); ?>" data-rel="tipsy-s" title="Twitter" class="social-twitter" target="_blank"></a>
-					</li>
-					<?php endif; ?>
-
-					<?php if($smof_data['sharing_pinterest']): ?>
-					<li>
-						<a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&amp;description=<?php echo urlencode($post->post_title); ?>" data-rel="tipsy-s" title="Pinterest" class="social-pinterest" target="_blank"></a>
-					</li>
-					<?php endif; ?>
-
-					<?php if($smof_data['sharing_linkedin']): ?>
-					<li>
-						<a href="http://linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" data-rel="tipsy-s" title="Linkedin" class="social-linkedin" target="_blank"></a>
-					</li>
-					<?php endif; ?>
-
-					<?php if($smof_data['sharing_tumblr']): ?>
-					<li>
-						<a href="http://www.tumblr.com/share/link?url=<?php echo urlencode(get_permalink()); ?>&amp;name=<?php echo urlencode($post->post_title); ?>&amp;description=<?php echo urlencode(get_the_excerpt()); ?>" data-rel="tipsy-s" title="Tumblr" class="social-tumblr" target="_blank"></a>
-					</li>
-					<?php endif; ?>
-				</ul>
 
 			<?php endif;
 			echo '</div>';
@@ -134,7 +127,7 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 			echo '<h2 class="post-title"><a href="' . get_permalink() . '" >' . get_the_title() . '</a></h2>';
 			}
 
-			
+
 			if ($show_cat2 == 'yes' || $show_date2 == 'yes' || $show_comm2 == 'yes'){
 				echo '<div class="meta clearfix">';
 
@@ -148,41 +141,41 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 					if ($show_cat2 == 'yes'){
 						echo '<span class="meta-cat">';
 							echo '<i class="icon-folder-open-alt"></i>';
-							the_category(', '); 
-						echo '</span>'; 
+							the_category(', ');
+						echo '</span>';
 					}
 
 					if ($show_comm2 == 'yes'){
 						echo '<span class="meta-comm">';
 							echo '<i class="icon-comment-alt"></i>';
-							comments_popup_link('0 Comments', '1 Comment', '% Comments'); 
-						echo '</span>'; 
+							comments_popup_link('0 Comments', '1 Comment', '% Comments');
+						echo '</span>';
 					}
-					
+
 				echo '</div>';
 			}
- 
+
 			if ($blog_style2 == 'style2'){
 				if (has_post_thumbnail($post->ID, 'full')){
 					$imgurl = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
 					$img_url = $imgurl[0];
 
-					if (is_singular()) { 
-						$height = ''; 
+					if (is_singular()) {
+						$height = '';
 					} else {
 						$height = '400';
 					}
-					
+
 					if (isset($layout) == 'without') {
 						$image = aq_resize($img_url, 960, $height, true);
 					} else {
 						$image = aq_resize($img_url, 720, $height, true);
 					}
 
-					echo '<img src="' . $image . '" alt="' . get_the_title() . '" class="mb25"/>'; 
+					echo '<img src="' . $image . '" alt="' . get_the_title() . '" class="mb25"/>';
 				}
-			} 
-			
+			}
+
 
 
 			echo '<p>';
