@@ -43,7 +43,7 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 
                     <?php if($smof_data['sharing_pinterest']): ?>
                     <li>
-                        <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&amp;description=<?php echo urlencode($post->post_title); ?>" data-rel="tipsy-s" title="Pinterest" class="pinterest" target="_blank">                         <img src="<?php bloginfo('stylesheet_directory');?>/img/pinterest.png" alt="">
+                        <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&amp;description=<?php echo urlencode($post->post_title); ?>#widget" data-rel="tipsy-s" title="Pinterest" class="pinterest" target="_blank">                         <img src="<?php bloginfo('stylesheet_directory');?>/img/pinterest.png" alt="">
 </a>
                     </li>
                     </ul>
@@ -205,3 +205,4 @@ $featured = get_post_meta( $post->ID, '_p_featured', true );
 	</div><!-- end div .blog-content -->
 
 </div><!-- end div .blog-post-content -->
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
