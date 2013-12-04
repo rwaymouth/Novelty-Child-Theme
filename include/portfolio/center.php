@@ -21,7 +21,6 @@ if ($wp_query->have_posts()) : while($wp_query->have_posts()) : $wp_query->the_p
 <div class="portfolio-content">
 
 	<?php
-<<<<<<< HEAD
 			echo '<div class="portfolio-header clearfix"><h1>'.get_the_title().'</h1>';?>
         	<a class="portfolio-nav" href="../">
         		<button>Back</buton>
@@ -35,7 +34,6 @@ if ($wp_query->have_posts()) : while($wp_query->have_posts()) : $wp_query->the_p
 			</buton></a>
 			</div>';
 
->>>>>>> 24b50f3197282d41fe7cd7b08bc1a6711d8dbf33
 		$portflio_single_link = '';
 	if ($smof_data['portflio_single_link'] == 1){
 		/*echo '<div class="portfolio-single-link">';
