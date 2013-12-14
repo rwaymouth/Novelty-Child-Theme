@@ -317,10 +317,15 @@ Portfolio
 }
 .portfolio-nav {
     float: right;
+    border: 0px solid rgba(0,0,0,.7);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.7);
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255, .3);
+    outline: none;
 }
 
-.portfolio-nav button {
-    float: right;
+.portfolio-nav:hover, .portfolio-nav:focus {
+    background: rgba(0,0,0,.1);
 }
 
 
