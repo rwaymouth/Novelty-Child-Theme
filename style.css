@@ -5,7 +5,7 @@ Description:    Child theme for the Novelty Theme
 Author:         Pale Fire Design
 Author URI:     http://palefiredesign.com
 Template:       novelty
-Version:        0.1
+Version:        0.95
 */
 
 @import url("../novelty/style.css");
@@ -316,6 +316,10 @@ Portfolio
     float: left;
 }
 .portfolio-nav {
+    float: right;
+}
+
+.portfolio-nav button {
     float: right;
 }
 
