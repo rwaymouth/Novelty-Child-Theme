@@ -1,11 +1,11 @@
 /*
-Theme Name:     Novelty Child
+Theme Name:     Novelty Child - Revision
 Theme URI:
 Description:    Child theme for the Novelty Theme
 Author:         Pale Fire Design
 Author URI:     http://palefiredesign.com
 Template:       novelty
-Version:        0.95
+Version:        1.0
 */
 
 @import url("../novelty/style.css");
@@ -73,7 +73,7 @@ Logo
 #header .logo {
 	width: 40%;
 	max-width: 672px;
-	margin: 15px auto -5px auto;
+	margin: 15px auto 15px auto;
 }
 
 /*
@@ -263,15 +263,15 @@ img {
 
 .front-page-blog .blog-post-wrapper .featured-thumb + .post-title {
 	text-align: left;
-	margin-top: -1.25em;
-	margin-bottom: 1em;
-	font-size: 1.5em;
+	//margin-top: -1.25em;
+	//margin-bottom: 1em;
+	//font-size: 1.5em;
 }
 
 .front-page-blog  .blog-post-wrapper:first-of-type .featured-thumb + .post-title {
-	margin-top: -1em;
-	margin-bottom: 1em;
-	font-size: 2.5em;
+	//margin-top: -1em;
+	//margin-bottom: 1em;
+	font-size: 1.25em;
 }
 
 .front-page-blog  .featured-thumb + .post-title > a {
@@ -381,6 +381,25 @@ Social in Nav
     max-height: 2em;
 }
 
+.blog-content > .social-block > ul {
+   margin: 0;
+}
+
+.blog-content > h1 {
+	margin-bottom: 0;
+}
+
+.blog-content > h1 + .social-block {
+	vertical-align: top;
+	margin-top: -0.5em;
+}
+.compact-archives {
+	font-size: 0.75em;
+}
+
+.wpb_caw_widget ul li {
+	padding: 0.5em;
+}
 
 /*
 Media Queries
